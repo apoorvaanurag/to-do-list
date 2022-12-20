@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3f3f3;
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-height: 80vh;
+  width: 70vw;
+  margin-top: 3em;
+  background-color: white;
+  overflow: auto;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(161, 109, 109, 0.25) 0px 30px 60px -30px;
+}
+
+h3 {
+  text-align: center;
+  margin: 0 0 1.5em 0;
+  padding: 2em 0 0 0;
+}
+
+.day-info {
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2em 1em 2em;
+}
+
+.fas {
+  float: right;
+  margin-right: 1em;
+  margin-left: -1em;
+  cursor: pointer;
+}
+
+form {
+  margin-bottom: 1.5em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-todo-text {
+  padding: 0.5em;
+  border: none;
+  background-color: #f3f3f3;
+}
+
+.todo {
+  padding: 1.2em 2em;
+  transition: all 0.5s ease;
+}
+
+.todo:hover {
+  background-color: lightgreen;
+  color: black;
+}
+
+.todo-input {
+  padding: 0.8em 2em;
+  border: none;
+  background-color: #f3f3f3;
+}
+
+input {
+  margin-right: 2em;
+}
+
+.check {
+  accent-color: lightgreen;
+}
+
+.todo-input:focus {
+  outline: none;
+}
+
+button {
+  font-size: 1.9em;
+  border: none;
+  margin-left: -1em;
+  padding: 0 0.28em;
+  background-color: lightgreen;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  border-radius: 0.5em;
+}
+
+span {
+  float: right;
+  cursor: pointer;
+}
+
+.checked {
+  text-decoration: line-through;
+  text-decoration-color: black;
+  text-decoration-thickness: 0.2em;
+}
+
+.delete {
+  transition: all 0.3s ease;
+}
+
+.delete:hover {
+  transform: scale(1.5);
+}
+
+.dark-body {
+  background-color: #121212;
+  color: #f3f3f3;
+}
+
+.dark-container {
+  background-color: #1d1d1d;
+  box-shadow: none;
+}
+
+.todo-input-dark {
+  background-color: #242424;
+  color: #f3f3f3;
+}
