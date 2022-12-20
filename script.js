@@ -45,12 +45,12 @@ dateNow.innerHTML = ` ${now.getDate().toString().padStart(2, '0')} ${
 dayNow.innerHTML = `${days[now.getDay()]}`;
 
 darkModeBtn.addEventListener('click', function () {
-  if (darkModeBtn.classList.contains('fa-moon')) {
-    darkModeBtn.classList.add('fa-sun');
-    darkModeBtn.classList.remove('fa-moon');
+  if (darkModeBtn.classList.contains('fa-moon-o')) {
+    darkModeBtn.classList.add('fa-sun-o');
+    darkModeBtn.classList.remove('fa-moon-o');
   } else {
-    darkModeBtn.classList.add('fa-moon');
-    darkModeBtn.classList.remove('fa-sun');
+    darkModeBtn.classList.add('fa-moon-o');
+    darkModeBtn.classList.remove('fa-sun-o');
   }
 
   body.classList.toggle('dark-body');
@@ -60,26 +60,31 @@ darkModeBtn.addEventListener('click', function () {
 
 const addTodo = function (e) {
   e.preventDefault();
+  console.log(e);
 
   const html = `<div class="todo"> 
-  <input type="checkbox" class="check" />${todoInput.value}
-   <span class="delete">&times;</span>
- </div>
-  `;
+                 <input type="checkbox" class="check" />${todoInput.value}
+                <span class="delete">&times;</span>
+                </div>
+                `;
+
   todoList.insertAdjacentHTML('afterbegin', html);
   todoInput.value = '';
+
+  document.querySelector('.check').addEventListener('click', (e) => {
+    console.log(e);
+
+    e.target.checked
+      ? e.target.parentElement.classList.add('checked')
+      : e.target.parentElement.classList.remove('checked');
+  });
 
   document
     .querySelector('.delete')
     .addEventListener(
       'click',
-      e => (e.target.parentElement.style.display = 'none')
+      (e) => (e.target.parentElement.style.display = 'none')
     );
-
-  document.querySelector('.check').addEventListener('click', e => {
-    e.target.checked
-      ? e.target.parentElement.classList.add('checked')
-      : e.target.parentElement.classList.remove('checked');
-  });
 };
+
 todoButton.addEventListener('click', addTodo);
