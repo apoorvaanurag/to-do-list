@@ -30,6 +30,7 @@ h3 {
   text-align: center;
   margin: 0 0 1.5em 0;
   padding: 2em 0 0 0;
+  /* display: none; */
 }
 
 .day-info {
@@ -40,6 +41,8 @@ h3 {
 }
 
 .fas {
+  /* width:rem; */
+  /* height: auto; */
   float: right;
   margin-right: 1em;
   margin-left: -1em;
